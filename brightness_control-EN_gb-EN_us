@@ -1,0 +1,11 @@
+int N; 
+void setup() 
+{
+pinMode(3, OUTPUT); // Sets PIN 3 as output
+}
+void loop() // Infinite loop
+{
+  N=analogRead(A3); // AnalogRead A3
+  N = map(N,0,123,0,255); // Maps the value between 0-123 and 0-255
+    analogWrite(3,N); // Writes the mapped value to 3 and N
+}
